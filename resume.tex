@@ -4,8 +4,7 @@
 
 % moderncv themes
 \moderncvtheme{casual}
-\usepackage[lmargin=0.8in,rmargin=0.8in,top=0.8in,bottom=0.8in]{geometry}
-
+\usepackage[left=10mm,right=15mm,top=10mm,bottom=0.8in]{geometry}
 \newcommand{\hlink}[1]{\href{https://#1}{#1}}
 
 \firstname{Saif}
@@ -19,16 +18,16 @@
 \section{Work Experience}
 \cventry{Jan. 2022 - Apr. 2022}{Compiler Engineering Intern}{Groq Inc.}{Mississauga ON (remote)}{}
 {\begin{itemize}
-    \item Designed and implemented algorithms to efficiently utilize hardware resources for common tensor operations, increasing inference throughput by up to 40\%
-    \item Wrote \textbf{MLIR/LLVM} passes in \textbf{C++} to perform optimizations on \textbf{ONNX} graphs
-    \item Created models in \textbf{PyTorch} to measure cycle-accurate compiler performance
+    \item Designed and implemented algorithms to efficiently utilize hardware resources for common tensor operations (e.g. convolutions), increasing inference throughput by up to 40\%
+    \item Created optimization passes in \textbf{C++} using the \textbf{MLIR} compiler framework to manipulate neural networks described in the \textbf{ONNX} format
+    \item Created machine learning models in \textbf{PyTorch} to run end-to-end compiler tests and measure cycle-accurate performance when run on custom hardware
 \end{itemize}}
 
 \cventry{Jan. 2020 - Aug. 2020}{Software Engineering Co-Op}{RadComm Systems}{Oakville ON}{}
 {\begin{itemize}
-    \item Researched cutting-edge radiation detection techniques, using \textbf{GNU Octave} and \textbf{Python} for data visualisation to assess development options
-    \item Applied statistical techniques to analyze gamma-ray radiation patterns in \textbf{C\#}
-    \item Automated voltage calibration process for complex device configurations
+    \item Researched cutting-edge radiation detection techniques using \textbf{GNU Octave} and \textbf{Python} for data visualization to assess development options
+    \item Implemented algorithms in \textbf{C\#} to analyze radiation patterns using the \textbf{ReactiveX} library to handle real-time data emitted by an embedded device
+    \item Automated device calibration process using \textbf{C\#} to allow parallel setup of many devices
 \end{itemize}}
 
 \cventry{Sep. 2020 - Dec. 2020}{Undergraduate Research Assistant}{University of Waterloo}{Waterloo ON}{}
@@ -40,16 +39,16 @@
 
 \cventry{May 2019 - Aug 2019}{Secure Software Developer}{ESCRYPT}{Waterloo ON}{}
 {\begin{itemize}
-    \item Implemented process for periodically provisioning digital certificates on-vehicle
-    \item Improved signing/verifying algorithms in \textbf{C++} targeted at vehicular embedded systems
-    \item Wrote standards-compliant tests using \textbf{GoogleTest} framework to prove functionality
+    \item Implemented asynchronous process in \textbf{C++} for periodically provisioning digital certificates on-vehicle, improving anonymity in the system by enabling certificate swapping
+    %\item Improved signing/verifying algorithms in \textbf{C++} targeted at vehicular embedded systems
+    \item Wrote ETSI-compliant tests using \textbf{GoogleTest} framework to prove functionality
 \end{itemize}}
 
 
 \section{Projects}
 \cventry{May 2022 - Aug. 2022}{Bayesian Network Accelerator}{}{Python | VHDL | Chisel}{}
 {\begin{itemize}
-    \item Designed hardware in \textbf{VHDL} for efficient Bayesian inference
+    \item Created hardware design for inference over a Bayesian network leveraging parallelism, efficient discrete sampling algorithms, and Markov-Chain Monte-Carlo methods (e.g. likelihood weighting)
     \item Created \textbf{protobuf}-based specifications for model description and elaboration
     \item Implemented compiler in \textbf{Python} to analyze models and emit VHDL for accelerator
 \end{itemize}}
@@ -74,7 +73,7 @@
 {\begin{itemize}
     \item Implements RV32I spec; written from scratch in \textbf{Verilog}, simulated using \textbf{Verilator}
     \item Wrote \textbf{Python} script to run standardized RV32I instruction and benchmark tests
-    \item 5-stage pipeline with static branch prediction, register bypassing, hazard detection
+    %\item 5-stage pipeline with static branch prediction, register bypassing, hazard detection
 \end{itemize}}
 
 % \cventry{May 2021 - Sep. 2021}{Real-Time Operating System Kernel}{}{C | ARM Assembly | Keil uVision}{}
@@ -87,7 +86,7 @@
 \section{Education}
 \cventry{Sep. 2019 - Apr. 2023 (expected)}{University of Waterloo}{Candidate for Computer Engineering B.A.Sc}{Waterloo ON}{}
 {
-    Relevant coursework:\\
+    Relevant coursework and projects in:\\
     \\
 \begin{minipage}{0.3\textwidth}
 \begin{itemize}
@@ -101,6 +100,13 @@
     \item Operating Systems
     \item Compilers
     \item Reinforcement Learning
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\begin{itemize}
+    \item Digital VLSI
+    \item Computer Security
+    \item Digital Signal Processing
 \end{itemize}
 \end{minipage}
 }
