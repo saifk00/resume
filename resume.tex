@@ -1,0 +1,107 @@
+\documentclass{moderncv}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+
+% moderncv themes
+\moderncvtheme{casual}
+\usepackage[lmargin=0.8in,rmargin=0.8in,top=0.8in,bottom=0.8in]{geometry}
+
+\newcommand{\hlink}[1]{\href{https://#1}{#1}}
+
+\firstname{Saif}
+\familyname{Khattak}
+\email{saifkhattak.00@gmail.com}
+\extrainfo{\hlink{linkedin.com/in/skhattak00/} | \hlink{github.com/saifk00} | \hlink{skhattak.dev}}
+\nopagenumbers{}
+
+\begin{document}
+\makecvtitle
+\section{Work Experience}
+\cventry{Jan. 2022 - Apr. 2022}{Compiler Engineering Intern}{Groq Inc.}{Mississauga ON (remote)}{}
+{\begin{itemize}
+    \item Designed and implemented algorithms to efficiently utilize hardware resources for common tensor operations, increasing inference throughput by up to 40\%
+    \item Wrote \textbf{MLIR/LLVM} passes in \textbf{C++} to perform optimizations on \textbf{ONNX} graphs
+    \item Created models in \textbf{PyTorch} to measure cycle-accurate compiler performance
+\end{itemize}}
+
+\cventry{Jan. 2020 - Aug. 2020}{Software Engineering Co-Op}{RadComm Systems}{Oakville ON}{}
+{\begin{itemize}
+    \item Researched cutting-edge radiation detection techniques, using \textbf{GNU Octave} and \textbf{Python} for data visualisation to assess development options
+    \item Applied statistical techniques to analyze gamma-ray radiation patterns in \textbf{C\#}
+    \item Automated voltage calibration process for complex device configurations
+\end{itemize}}
+
+\cventry{Sep. 2020 - Dec. 2020}{Undergraduate Research Assistant}{University of Waterloo}{Waterloo ON}{}
+{\begin{itemize}
+    \item Wrote \textbf{C} implementation of novel post-quantum cryptographic algorithms
+    \item Implemented cache-aware optimizations resulting in 60\% speed improvement
+    \item Created custom boolean matrix library for use in cryptographic algorithms
+\end{itemize}}
+
+\cventry{May 2019 - Aug 2019}{Secure Software Developer}{ESCRYPT}{Waterloo ON}{}
+{\begin{itemize}
+    \item Implemented process for periodically provisioning digital certificates on-vehicle
+    \item Improved signing/verifying algorithms in \textbf{C++} targeted at vehicular embedded systems
+    \item Wrote standards-compliant tests using \textbf{GoogleTest} framework to prove functionality
+\end{itemize}}
+
+
+\section{Projects}
+\cventry{May 2022 - Aug. 2022}{Bayesian Network Accelerator}{}{Python | VHDL | Chisel}{}
+{\begin{itemize}
+    \item Designed hardware in \textbf{VHDL} for efficient Bayesian inference
+    \item Created \textbf{protobuf}-based specifications for model description and elaboration
+    \item Implemented compiler in \textbf{Python} to analyze models and emit VHDL for accelerator
+\end{itemize}}
+
+\cventry{Feb. 2022 - Mar. 2022}{CHIP-8 Emulator}{}{C++ | SDL2 | ImGUI}{}
+{\begin{itemize}
+    \item \textbf{C++} interpreter for CHIP-8 instruction set, runs publicly available ROMs
+    \item Includes graphical and audio interface using \textbf{SDL2}
+    \item Implemented assembler and disassembler to enable troubleshooting
+    \item Designed live debugger using \textbf{ImGUI} to inspect memory dumps and processor state
+\end{itemize}}
+
+\cventry{Dec. 2021 - Jan. 2022}{3D Rasterized Render System}{}{C++ | CMake | OpenGL}{}
+{\begin{itemize}
+    \item 3D rasterized rendering system written with \textbf{OpenGL 3.3} in \textbf{C++17}
+    \item Implements mesh generation, texture loading and phong lighting shaders
+    \item Allows model loading from common file types based on the \textbf{Assimp} library
+    \item Uses \textbf{CMake} to allow for cross-platform development and support
+\end{itemize}}
+
+\cventry{Sep. 2021 - Nov. 2021}{Pipelined 32-Bit RISC-V Core}{}{Verilog | Verilator}{}
+{\begin{itemize}
+    \item Implements RV32I spec; written from scratch in \textbf{Verilog}, simulated using \textbf{Verilator}
+    \item Wrote \textbf{Python} script to run standardized RV32I instruction and benchmark tests
+    \item 5-stage pipeline with static branch prediction, register bypassing, hazard detection
+\end{itemize}}
+
+% \cventry{May 2021 - Sep. 2021}{Real-Time Operating System Kernel}{}{C | ARM Assembly | Keil uVision}{}
+% {\begin{itemize}
+%     \item Implements custom memory manager, EDF scheduler, IPC, and interrupt-based I/O
+%     \item Targets \textbf{ARM Cortex-M3} processor, implemented context switching in assembly
+%     \item Allows user to run custom commands through \textbf{UART} terminal
+% \end{itemize}}
+
+\section{Education}
+\cventry{Sep. 2019 - Apr. 2023 (expected)}{University of Waterloo}{Candidate for Computer Engineering B.A.Sc}{Waterloo ON}{}
+{
+    Relevant coursework:\\
+    \\
+\begin{minipage}{0.3\textwidth}
+\begin{itemize}
+    \item Computer Architecture
+    \item FPGAs
+    \item ARM \& RISC-V ISAs
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\begin{itemize}
+    \item Operating Systems
+    \item Compilers
+    \item Reinforcement Learning
+\end{itemize}
+\end{minipage}
+}
+\end{document}
