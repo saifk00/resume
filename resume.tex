@@ -18,15 +18,15 @@
 \section{Work Experience}
 \cventry{Jan 2022 - Apr 2022}{Compiler Engineering Intern}{Groq Inc.}{Mississauga ON (remote)}{}
 {\begin{itemize}
-    \item Designed and implemented algorithms to efficiently utilize hardware resources for common tensor operations (e.g. convolutions), increasing inference throughput by up to 40\%
-    \item Created optimization passes in \textbf{C++} using the \textbf{MLIR} compiler framework to manipulate neural networks described in the \textbf{ONNX} format
-    \item Created machine learning models in \textbf{PyTorch} to run end-to-end compiler tests and measure cycle-accurate performance when run on custom hardware
+    \item Increased neural network inference throughput by up to 40\% by designing algorithms in \textbf{C++} to efficiently utilize hardware resources for common tensor operations (e.g. convolutions)
+    \item Created optimization passes in \textbf{C++} using the \textbf{MLIR} compiler framework to manipulate neural networks described in \textbf{ONNX} format
+    \item Created machine learning models in \textbf{PyTorch} to run end-to-end compiler tests and measure cycle-accurate performance when run on custom neural network accelerator hardware
 \end{itemize}}
 
 \cventry{Jan 2020 - Aug 2020}{Software Engineering Co-Op}{RadComm Systems}{Oakville ON}{}
 {\begin{itemize}
-    \item Researched cutting-edge radiation detection techniques using \textbf{GNU Octave} and \textbf{Python} for data visualization to assess development options
-    \item Implemented algorithms in \textbf{C\#} to analyze radiation patterns using the \textbf{ReactiveX} library to handle real-time data emitted by an embedded device
+    \item Researched cutting-edge radiation detection and identification techniques using \textbf{GNU Octave} and \textbf{Python} for data visualization to assess development options
+    \item Implemented algorithms in \textbf{C\#} to analyze radiation patterns using the \textbf{ReactiveX} library to handle real-time data emitted by an embedded device, processing energy histograms every 100ms
     \item Automated device calibration process using \textbf{C\#} to allow parallel setup of many devices
 \end{itemize}}
 
@@ -48,9 +48,9 @@
 \section{Projects}
 \cventry{May 2022 - Aug 2022}{Bayesian Network Accelerator}{}{Python | VHDL}{}
 {\begin{itemize}
-    \item Created hardware design for inference over a Bayesian network leveraging parallelism, efficient discrete sampling algorithms, and Markov-Chain Monte-Carlo methods (e.g. likelihood weighting)
+    \item Created RTL design for inference over a Bayesian network leveraging parallelism, efficient discrete sampling algorithms, and Markov-Chain Monte-Carlo methods (e.g. likelihood weighting)
     \item Created \textbf{protobuf}-based specifications for model description and elaboration
-    \item Implemented compiler in \textbf{Python} to analyze models and emit VHDL for accelerator
+    \item Implemented compiler in \textbf{Python} to analyze models and emit \textbf{VHDL} for accelerator
 \end{itemize}}
 
 \cventry{Feb 2022 - Mar 2022}{CHIP-8 Emulator}{}{C++ | SDL2 | ImGUI}{}
@@ -64,14 +64,14 @@
 \cventry{Dec 2021 - Jan 2022}{3D Rasterized Render System}{}{C++ | CMake | OpenGL}{}
 {\begin{itemize}
     \item 3D rasterized rendering system written with \textbf{OpenGL 3.3} in \textbf{C++17}
-    \item Implements mesh generation, texture loading and phong lighting shaders
-    \item Allows model loading from common file types based on the \textbf{Assimp} library
+    \item Implemented mesh generation, texture loading and phong lighting shaders
+    \item Enabled loading models from common file types based on the \textbf{Assimp} library
     %\item Uses \textbf{CMake} to allow for cross-platform development and support
 \end{itemize}}
 
 \cventry{Sep 2021 - Nov 2021}{Pipelined 32-Bit RISC-V Core}{}{Verilog | Verilator}{}
 {\begin{itemize}
-    \item Implements RV32I spec; written from scratch in \textbf{Verilog}, simulated using \textbf{Verilator}
+    \item Implemented RV32I spec in \textbf{Verilog} using a 5-stage pipeline design with register bypassing, simulated test programs (individual instructions and benchmark algorithms) using \textbf{Verilator} to verify design
     \item Wrote \textbf{Python} script to run standardized RV32I instruction and benchmark tests
     %\item 5-stage pipeline with static branch prediction, register bypassing, hazard detection
 \end{itemize}}
