@@ -1,6 +1,7 @@
 \documentclass{moderncv}
 \usepackage{lmodern}
 \usepackage[utf8]{inputenc}
+\usepackage{verbatim}
 
 % moderncv themes
 \moderncvtheme{casual}
@@ -18,8 +19,37 @@
 \section{Work Experience}
 \cventry{Sep 2022 - Dec 2022}{Software Engineering Intern}{Snowflake}{San Mateo CA}{}
 {\begin{itemize}
-    \item Working on data sharing platform
+    \item Added rules to \textbf{ANTLR 3} grammar to parse SQL CRUD commands for \textit{aggregation policies}
+    \item Implemented compiler changes in \textbf{Java} to parse and generate code for applying policies to a table
+    \item Implemented changes to custom \textbf{FoundationDB} layer to store information about policies
 \end{itemize}}
+
+\begin{comment}
+Snowflake1: Aggregation Policy Parser Stuff
+basically, added a new type of policy which is an SQL object
+it had to be added to the parser through an ANTLR grammar
+but there was an issue with the way the grammar was factored into sub-grammars
+so I had to inspect generated code and eventually refactor the root rules
+into subrules in separate files
+    rootparser.g:
+        rule -> rule1 | rule2 | rule3;
+    rules1.g:
+        rule1 -> [...]
+        rule2 -> [...]
+    rules2.g:
+        rule3 -> [...]
+became
+    rootparser.g:
+        rule -> rules1 | rules2
+    rules1.g:
+        rules1 -> rule1 | rule2
+        rule1 -> [...]
+        rule2 -> [...]
+    rules2.g:
+        rule3 -> [...]
+and then i was able to implement the rules for that type of policy
+\end{comment}
+
 \cventry{Jan 2022 - Apr 2022}{Compiler Engineering Intern}{Groq}{Toronto ON}{}
 {\begin{itemize}
     \item Increased neural network inference throughput by up to 40\% by designing algorithms in \textbf{C++} to efficiently utilize hardware resources for common tensor operations (e.g. convolutions)
@@ -36,25 +66,28 @@
 
 \cventry{Sep 2020 - Dec 2020}{Undergraduate Research Assistant}{University of Waterloo}{Waterloo ON}{}
 {\begin{itemize}
-    \item Wrote \textbf{C} implementation of novel post-quantum cryptographic algorithms
-    \item Implemented cache-aware optimizations resulting in 60\% speed improvement
+    \item Implemented novel post-quantum cryptographic algorithms in \textbf{C}
+    \item Designed and implemented cache-aware optimizations resulting in 60\% speed improvement
     \item Created custom boolean matrix library for use in cryptographic algorithms
 \end{itemize}}
 
-\cventry{May 2019 - Aug 2019}{Secure Software Developer}{ESCRYPT}{Waterloo ON}{}
+%% Sorry old pal, but we dont need ESCRYPT here anymore
+\begin{comment}
+    \cventry{May 2019 - Aug 2019}{Secure Software Developer}{ESCRYPT}{Waterloo ON}{}
 {\begin{itemize}
     \item Implemented asynchronous process in \textbf{C++} for periodically provisioning \textbf{X.509} certificates on-vehicle, improving anonymity in the system by enabling certificate swapping
     %\item Improved signing/verifying algorithms in \textbf{C++} targeted at vehicular embedded systems
     \item Wrote ETSI-compliant tests using \textbf{GoogleTest} framework to prove functionality
 \end{itemize}}
-
+\end{comment}
 
 \section{Projects}
-\cventry{May 2022 - Aug 2022}{Bayesian Network Accelerator}{}{Python | VHDL}{}
+\cventry{May 2022 - Dec 2022}{Bayesian Network Acceleration Compiler}{}{Scala | Chisel | Python | Verilog}{}
 {\begin{itemize}
-    \item Created RTL design for inference over a Bayesian network leveraging parallelism, efficient discrete sampling algorithms, and Markov-Chain Monte-Carlo methods (e.g. likelihood weighting)
-    \item Created \textbf{protobuf}-based specifications for model description and elaboration
-    \item Implemented compiler in \textbf{Python} to analyze models and emit \textbf{VHDL} for accelerator
+    \item Created compiler in \textbf{Scala} to convert bayesian network specifications into a \textbf{Verilog} module that can answer queries on the network with real-time evidence based on Markob-Chain Monte-Carlo techniques
+    \item Created \textbf{Protobuf}-based specifications for model description and elaboration
+    \item Created language for expressing Bayesian networks parsed using an \textbf{ANTLR 4} grammar
+    \item Utilized \textbf{Chisel} to construct hardware modules dynamically and generate various RTL backends
 \end{itemize}}
 
 \cventry{Feb 2022 - Mar 2022}{CHIP-8 Emulator}{}{C++ | SDL2 | ImGUI}{}
