@@ -16,21 +16,44 @@
 
 \begin{document}
 \makecvtitle
+\begin{comment}
+\section{Skills}
+\begin{minipage}{0.25\textwidth}
+    \begin{itemize}
+        \item Reinforcement Learning
+    \end{itemize}
+\end{minipage}
+    \begin{minipage}{0.25\textwidth}
+    \begin{itemize}
+        \item Reinforcement Learning
+    \end{itemize}
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+    \begin{itemize}
+        \item Reinforcement Learning
+    \end{itemize}
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+    \begin{itemize}
+        \item Reinforcement Learning
+    \end{itemize}
+\end{minipage}
+\end{comment}
 \section{Work Experience}
 
 \cventry{Aug 2023 - Ongoing}{FPGA Compiler Engineer}
 {Intel}{Toronto ON}{}
 {\begin{itemize}
-    \item Worked on the FPGA backend for the Intel oneAPI C++ compiler, which compiles high level \textbf{SYCL} or \textbf{OpenCL} code to an executable where a CPU host can execute kernels on an FPGA
+    %\item Worked on the FPGA backend for the Intel oneAPI C++ compiler, which compiles high level \textbf{SYCL} or \textbf{OpenCL} code to an executable where a CPU host can execute kernels on an FPGA
     \item Designed a feature to generate Avalon-based \textbf{RTL} interface for compute kernels that includes registers to control and monitor hardware interrupts, ensuring usability for customers developing device drivers by engaging with FAEs for early feedback
-    \item Created and troubleshooted FPGA-specific loop optimization passes in the \textbf{LLVM} framework to improve throughput and area usage for user designs targeting Intel FPGAs as a heterogenous acceleration platform, improving throughput/area performance by 15\% on a user benchmark suite
+    \item Created and troubleshooted FPGA-specific \textbf{LLVM} loop optimization passes in \textbf{C++} to improve throughput and area usage for user designs written in \textbf{SYCL} and \textbf{OpenCL}, improving performance by 15\% on a user benchmark suite
     \item Debugged complex issues across the hardware-software boundary, including investigating compiled binaries, LLVM IR, OpenCL runtime libraries, Quartus compilation pipelines, Modelsim simulations, and HAL functionality
 \end{itemize}}
 
-\cventry{Sep 2022 - Dec 2022}{Software Engineering Intern}{Snowflake}{San Mateo CA}{}
+\cventry{Sep 2022 - Dec 2022}{Software Engineer}{Snowflake}{San Mateo CA}{}
 {\begin{itemize}
-    \item Developed data privacy features at the SQL query engine level for Snowflake's cloud database platform
-    \item Added rules to an \textbf{ANTLR 3} grammar to enable managing data aggregation policies in SQL, enabling customers to share data while maintaining their users' privacy
+    %\item Developed data privacy features at the SQL query engine level for Snowflake's cloud database platform
+    \item Added rules to an \textbf{ANTLR 3} grammar to enable managing data aggregation policies in \textbf{SQL}, enabling customers to share data while maintaining their users' privacy
     \item Implemented compiler changes in \textbf{Java} to parse and generate code for applying policies to a table
     \item Implemented changes to a custom \textbf{FoundationDB} layer to store information about policies
 \end{itemize}}
@@ -61,18 +84,18 @@ became
 and then i was able to implement the rules for that type of policy
 \end{comment}
 
-\cventry{Jan 2022 - Apr 2022}{Compiler Engineering Intern}{Groq}{Toronto ON}{}
+\cventry{Jan 2022 - Apr 2022}{Compiler Engineer}{Groq}{Toronto ON}{}
 {\begin{itemize}
-    \item Worked on the middle-end of Groq's compiler, which converts ONNX models to an instruction stream for the Tensor Streaming Processor, a custom neural network inference accelerator
+    %\item Worked on the middle-end of Groq's compiler, which converts ONNX models to an instruction stream for the Tensor Streaming Processor, a custom neural network inference accelerator
     \item Increased neural network inference throughput by up to 20\% by designing algorithms in \textbf{C++} to efficiently utilize hardware resources for common tensor operations (e.g. convolutions)
     \item Created optimization passes in \textbf{C++} using the \textbf{MLIR} compiler framework to manipulate neural networks described in \textbf{ONNX} format
     \item Created machine learning models in \textbf{PyTorch} to run end-to-end compiler tests and measure cycle-accurate performance when run on custom neural network accelerator hardware
 \end{itemize}}
 
-\cventry{Jan 2020 - Aug 2020}{Software Engineering Co-Op}{RadComm Systems}{Oakville ON}{}
+\cventry{Jan 2020 - Aug 2020}{Software Engineer}{RadComm Systems}{Oakville ON}{}
 {\begin{itemize}
-    \item Developed software systems for controlling RadComm's radiation detection devices, which are used in recycling and medical facilities for monitoring and safety purposes
-    %\item Researched cutting-edge radiation analysis techniques using \textbf{GNU Octave} and \textbf{Python} for data visualization to assess development options
+    %\item Developed software systems for controlling RadComm's radiation detection devices, which are used in recycling and medical facilities for monitoring and safety purposes
+    \item Researched cutting-edge radiation analysis techniques using \textbf{GNU Octave} and \textbf{Python} for data visualization to assess development options
     \item Implemented algorithms in \textbf{C\#} to analyze radiation patterns using the \textbf{ReactiveX} library to handle real-time data emitted by an embedded device, processing energy histograms every 100ms
     \item Automated the device calibration process using \textbf{C\#} to allow parallel setup of many devices
 \end{itemize}}
@@ -98,7 +121,7 @@ and then i was able to implement the rules for that type of policy
 \end{comment}
 
 \section{Projects}
-\cventry{May 2022 - Dec 2022}{Bayesian Network Acceleration Compiler}{}{Scala | Chisel | Python | Verilog}{}
+\cventry{May 2022 - Dec 2022}{Bayesian Network Inference Accelerator}{}{Scala | Chisel | Python | Verilog}{}
 {\begin{itemize}
     \item Created a compiler in \textbf{Scala} to convert Bayesian network specifications into a \textbf{Verilog} module that can answer queries on the network with real-time evidence based on Markov-Chain Monte-Carlo techniques
     \item Created \textbf{Protobuf}-based specifications for model description and elaboration
@@ -110,7 +133,7 @@ and then i was able to implement the rules for that type of policy
 {\begin{itemize}
     \item \textbf{C++} interpreter for CHIP-8 instruction set, runs publicly available ROMs
     \item Includes graphical and audio interface using the \textbf{SDL2} library
-    %\item Implemented assembler and disassembler to enable troubleshooting
+    \item Implemented an assembler and disassembler to enable troubleshooting
     \item Designed live debugger using \textbf{ImGUI} to inspect memory dumps and processor state
 \end{itemize}}
 
@@ -149,6 +172,14 @@ and then i was able to implement the rules for that type of policy
 \cventry{Sep 2018 - Apr 2023}{University of Waterloo}{Computer Engineering B.A.Sc}{Waterloo ON}{}
 {
     Cumulative average \textbf{92\%}
+    \begin{itemize}
+        \item Degree honours: Dean's honours list, graduated with distinction
+        \item Scholarships and awards
+        \begin{itemize}
+            \item President's Research Award
+            \item Savvas Chamberlain Scholarship
+        \end{itemize}
+    \end{itemize}
 }
 
 \begin{comment}
