@@ -48,8 +48,11 @@
 {\begin{itemize}
     % Join policy enforcement
     % Aggregation policy enforcement
-    \item Enforced semantic constraints on SQL queries by implementing syntax analysis passes in Snowflake's SQL compiler
-    % TODO
+    \item Designed new syntax for the Snowflake SQL dialect to ease management of schema-level objects called `policies' that protect user privacy in data sharing contexts %agg/join policy
+    \item Wrote a translation stage in \textbf{Java} to store policy metadata in a custom \textbf{FoundationDB} layer % multiple aggregation policies
+    \item Implemented passes in Snowflake's SQL compiler to enforce policies by analyzing parse tree % join policies
+    \item Wrote code generation passes in the compiler to enforce privacy constraints during query execution % agg policy constrained gby
+    \item Designed optimizations to query execution plans to increase the flexibility of user queries while maintaining strong privacy guarantees % deferment
 \end{itemize}}
 
 \cventry{Aug 2023 - June 2024}{Software Engineer - FPGA Compiler}
