@@ -43,37 +43,39 @@
 \end{comment}
 \section{Work Experience}
 
-\cventry{June 2024 - Ongoing}{Software Engineer}
+\cventry{June 2024 - Ongoing}{SQL Compiler Engineer}
 {Snowflake}{San Mateo CA}{}
 {
-    \textit{SQL Compiler Platform Team}
+    \textit{Compiler Platform Team}
     \begin{itemize}
-        \item Maintained and improved the quality of Snowflake's SQL compiler, which executes over 1 billion queries a day. Participated in a support rotation that involves triaging and resolving customer cases.
-        \item Designed a mechanism to serialize query metadata into a \textbf{Protobuf} message as part of a project to create an API for the compiler, with the aim of reducing the developer effort required to extend it
+        \item Maintained and improved the quality of Snowflake's SQL compiler, which executes over 6 billion queries a day. Participated in a support rotation that involved triaging and resolving customer issues.
+        \item Overhauled dozens of compiler optimization passes using a new internal compiler framework as part of a multi-quarter effort to improve compilation time and reduce the rate of hard-to-diagnose errors.
+        \item Diagnosed query planning issues that resulted in poor performance in Snowflake's parallel execution architecture, such as cardinality misestimation or late filtering.
+        \item Designed a mechanism to serialize query metadata into a \textbf{Protobuf} message as part of a project to create an API for the compiler, with the aim of improving extensibility.
     \end{itemize}
     \textit{Data Governance Team}
     \begin{itemize}
         \item Led a project to design new SQL syntax enabling the application of multiple policies on a table, eliminating boilerplate code and reducing likelihood of human error when applying privacy constraints. % Implemented compiler changes in \textbf{Java} and \textbf{FoundationDB} metadata updates to support this functionality.
-        \item Designed algorithms to enforce Join Policy semantics on the parse tree of a SQL query, reducing the manual effort required to sanitize data before sharing it % the whole equivalence class thing, involved talking to Principals and discussions with product team on whether people would understand it
-        \item Designed optimizations on query execution plans to increase the query flexibility while maintaining privacy guarantees, reducing the amount of rewriting required for a query to satisfy constraints  % deferment
+        \item Designed algorithms to enforce Join Policy semantics on the parse tree of a SQL query, reducing the manual effort required to sanitize data before sharing. % the whole equivalence class thing, involved talking to Principals and discussions with product team on whether people would understand it
+        \item Designed optimizations on query execution plans to increase the query flexibility while maintaining privacy guarantees, reducing the amount of rewriting required for a query to satisfy constraints.  % deferment
     \end{itemize}
 }
 
-\cventry{Aug 2023 - June 2024}{Software Engineer - FPGA Compiler}
+\cventry{Aug 2023 - June 2024}{FPGA Compiler Engineer}
 {Intel}{Toronto ON}{}
 {\begin{itemize}
     %\item Worked on the FPGA backend for the Intel oneAPI C++ compiler, which compiles high level \textbf{SYCL} or \textbf{OpenCL} code to an executable where a CPU host can execute kernels on an FPGA
-    \item Enabled users to generate an Avalon-based \textbf{RTL} interface for compute kernels specified in \textbf{SYCL}
-    \item Created an FPGA-specific \textbf{LLVM} optimization pass in \textbf{C++} that improved performance by 15\% on a standard \textbf{OpenCL} benchmark suite, by using scalar evolution analysis to narrow induction variables
-    \item Debugged complex issues across the hardware-software boundary, including investigating compiled binaries, LLVM IR, OpenCL runtime libraries, Quartus compilation pipelines, Modelsim simulations, and HAL functionality
+    \item Enabled users to generate an Avalon-based \textbf{RTL} interface for compute kernels specified in \textbf{SYCL}.
+    \item Created an FPGA-specific \textbf{LLVM} optimization pass in \textbf{C++} that improved performance by 15\% on a standard \textbf{OpenCL} benchmark suite, by using scalar evolution analysis to narrow induction variables.
+    \item Debugged complex issues across the hardware-software boundary, including investigating compiled binaries, LLVM IR, OpenCL runtime libraries, Quartus compilation pipelines, Modelsim simulations, and HAL functionality.
 \end{itemize}}
 
-\cventry{Sep 2022 - Dec 2022}{Software Engineering Co-op - SQL Compiler}{Snowflake}{San Mateo CA}{}
+\cventry{Sep 2022 - Dec 2022}{SQL Compiler Engineer (Co-op)}{Snowflake}{San Mateo CA}{}
 {\begin{itemize}
-    \item Developed data privacy features at the \textbf{SQL} query engine level for Snowflake's cloud database platform
-    \item Added rules to an \textbf{ANTLR 3} grammar to enable managing data aggregation policies in \textbf{SQL}, enabling customers to share data while maintaining their users' privacy
-    \item Implemented compiler changes in \textbf{Java} to parse and generate code for applying policies to a table
-    \item Implemented changes to a custom \textbf{FoundationDB} layer to store information about policies
+    \item Developed data privacy features at the \textbf{SQL} query engine level for Snowflake's cloud database platform.
+    \item Added rules to an \textbf{ANTLR 3} grammar to enable managing data aggregation policies in \textbf{SQL}, enabling customers to share data while maintaining their users' privacy.
+    \item Implemented compiler changes in \textbf{Java} to parse and generate code for applying policies to a table.
+    \item Implemented changes to a custom \textbf{FoundationDB} layer to store information about policies.
 \end{itemize}}
 
 \begin{comment}
@@ -102,12 +104,12 @@ became
 and then i was able to implement the rules for that type of policy
 \end{comment}
 
-\cventry{Jan 2022 - Apr 2022}{Software Engineering Co-op - ML Compiler}{Groq}{Toronto ON}{}
+\cventry{Jan 2022 - Apr 2022}{ML Compiler Engineer (Co-op)}{Groq}{Toronto ON}{}
 {\begin{itemize}
     %\item Worked on the middle-end of Groq's compiler, which converts ONNX models to an instruction stream for the Tensor Streaming Processor, a custom neural network inference accelerator
-    \item Increased neural network inference throughput by up to 20\% by designing algorithms in \textbf{C++} to efficiently utilize hardware resources for common tensor operations (e.g. convolutions)
-    \item Created optimization passes in \textbf{C++} using the \textbf{MLIR} compiler framework to manipulate neural networks described in \textbf{ONNX} format
-    \item Created machine learning models in \textbf{PyTorch} to run end-to-end compiler tests and measure cycle-accurate performance when run on custom neural network accelerator hardware
+    \item Increased neural network inference throughput by up to 20\% by designing algorithms in \textbf{C++} to efficiently utilize hardware resources for common tensor operations (e.g. convolutions).
+    \item Created optimization passes in \textbf{C++} using the \textbf{MLIR} compiler framework to manipulate neural networks described in \textbf{ONNX} format.
+    \item Created machine learning models in \textbf{PyTorch} to run end-to-end compiler tests and measure cycle-accurate performance when run on custom neural network accelerator hardware.
 \end{itemize}}
 
 \begin{comment}
@@ -194,7 +196,7 @@ and then i was able to implement the rules for that type of policy
 \section{Education}
 \cventry{Sep 2018 - Apr 2023}{University of Waterloo}{Computer Engineering B.A.Sc}{Waterloo ON}{}
 {
-    Graduated with distinction
+    Graduated with distinction.
     % Cumulative average \textbf{92\%}
     % \begin{itemize}
     %     \item Degree honours: Dean's honours list, graduated with distinction
