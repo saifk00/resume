@@ -55,9 +55,7 @@
 \end{comment}
 \section{Overview}
 \begin{center}
-2+ years of experience in the acceleration of SQL queries and FPGA compilation.\\
-\vspace{1mm}
-Aiming to bridge the gap between the theoretically and practically computable.
+2+ years of experience optimizing parallel workloads across databases, FPGAs, and ML accelerators.
 \end{center}
 
 \section{Work Experience}
@@ -67,13 +65,13 @@ Aiming to bridge the gap between the theoretically and practically computable.
 {
     \textit{Compiler Platform Team}
     \begin{itemize}
-        \item Architected migration of 20+ compiler stages to new expression framework, enabling feature teams to focus on \textbf{what} optimizations to implement rather than \textbf{how} to integrate them, improving compilation performance by 10-15\% and reducing system incident rate by 100x across 6B daily queries.
-        \item Served as cross-functional technical consultant, democratizing access to compiler expertise across teams previously blocked by low-level framework complexity.
-        \item Participated in quarterly support rotation, triaging and resolving 40-50 customer issues weekly in 3-person team covering query performance degradation, correctness bugs, and compilation failures across the full execution stack.
+        \item Rearchitected 20+ compiler stages that are collectively run by 17M+ daily queries as part of a migration to a new expression framework.
+        \item Engineered large-scale workload validation strategies to roll out migrated compiler stages, ensuring zero regressions across all 6B+ daily customer queries.
+        \item Resolved 40-50 customer escalations per week during support rotations, triaging and resolving issues  with query performance degradation, correctness bugs, and compilation failures across the full stack.
     \end{itemize}
     \textit{Data Governance Team}
     \begin{itemize}
-        \item Led a project to design \textbf{new SQL syntax} enabling the application of multiple policies on a table, eliminating boilerplate code and reducing likelihood of human error when applying privacy constraints. % Implemented compiler changes in \textbf{Java} and \textbf{FoundationDB} metadata updates to support this functionality.
+        \item Led design of new SQL syntax enabling multiple policies on a table, reducing boilerplate and preventing errors in applying privacy constraints. % Implemented compiler changes in \textbf{Java} and \textbf{FoundationDB} metadata updates to support this functionality.
         \item Designed algorithms to enforce Join Policy semantics on the parse tree of a SQL query, reducing the manual effort required to sanitize data before sharing. % the whole equivalence class thing, involved talking to Principals and discussions with product team on whether people would understand it
         \item Designed optimizations on query execution plans to increase the query flexibility while maintaining privacy guarantees, reducing the amount of rewriting required for a query to satisfy constraints.  % deferment
     \end{itemize}
@@ -82,7 +80,7 @@ Aiming to bridge the gap between the theoretically and practically computable.
 \cventry{Aug 2023 - June 2024}{FPGA Compiler Engineer}
 {Intel}{Toronto ON}{}
 {\begin{itemize}
-    \item Enabled domain experts to describe compute kernels in high-level \textbf{SYCL} while automatically generating optimized \textbf{RTL} interfaces, democratizing access to reconfigurable hardware acceleration.
+    \item Enabled the compilation of compute kernels in high-level \textbf{SYCL} code to pipelined \textbf{RTL} implementations for Intel FPGAs.
     \item Created an FPGA-specific \textbf{LLVM} optimization pass in \textbf{C++} that improved performance by 15\% across standard \textbf{OpenCL} benchmarks by using scalar evolution analysis to narrow induction variables.
     \item Debugged complex issues across the hardware-software boundary, building expertise in the full compilation stack from high-level code to hardware implementation.
 \end{itemize}}
@@ -125,7 +123,7 @@ and then i was able to implement the rules for that type of policy
 
 \cventry{Jan 2022 - Apr 2022}{ML Compiler Engineer (Co-op)}{Groq}{Toronto ON}{}
 {\begin{itemize}
-    \item Bridged the gap between ML researchers' high-level \textbf{ONNX} models and specialized hardware execution, enabling 20\% throughput improvements through automated resource utilization algorithms for tensor operations.
+    \item Designed optimizations for the execution of \textbf{ONNX} models on custom hardware, enabling up to 20\% throughput improvements by efficient packing of tensor operations.
     \item Created optimization passes in \textbf{C++} using the \textbf{MLIR} compiler framework, applying cross-domain compilation techniques to neural network acceleration.
     \item Built end-to-end validation pipeline in \textbf{PyTorch}, enabling rapid iteration between algorithmic improvements and hardware performance measurement.
 \end{itemize}}
