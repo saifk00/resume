@@ -70,10 +70,10 @@
         \item Resolved 40-50 customer escalations per week during support rotations, triaging and resolving issues  with query performance degradation, correctness bugs, and compilation failures across the full stack.
     \end{itemize}
     \textit{Data Governance Team}
-    \begin{itemize}
-        \item Led design of new SQL syntax enabling multiple policies on a table, reducing boilerplate and preventing errors in applying privacy constraints. % Implemented compiler changes in \textbf{Java} and \textbf{FoundationDB} metadata updates to support this functionality.
-        \item Designed algorithms to enforce Join Policy semantics on the parse tree of a SQL query, reducing the manual effort required to sanitize data before sharing. % the whole equivalence class thing, involved talking to Principals and discussions with product team on whether people would understand it
-        \item Designed optimizations on query execution plans to increase the query flexibility while maintaining privacy guarantees, reducing the amount of rewriting required for a query to satisfy constraints.  % deferment
+    \begin{itemize}™
+        \item Led design of new SQL syntax enabling multiple policies on a table, reducing boilerplate and preventing errors in applying privacy constraints.
+        \item Designed algorithms to enforce Join Policy semantics on the parse tree of a SQL query, enabling data sharing for over 3000 tables while preserving sensitive information. % the whole equivalence class thing, involved talking to Principals and discussions with product team on whether people would understand it
+        \item Designed optimizations on query execution plans to increase query flexibility while maintaining privacy guarantees provided by aggregation policies, which protect over 80,000 tables in production.
     \end{itemize}
 }
 
