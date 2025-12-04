@@ -34,7 +34,7 @@
         \item MLIR
         \item SYCL
         \item SQL
-    \end{itemizes}
+    \end{itemize}
 \end{minipage}
 \begin{minipage}{0.25\textwidth}
     \begin{itemize}
@@ -66,11 +66,11 @@
     \textit{Compiler Platform Team}
     \begin{itemize}
         \item Rearchitected 20+ compiler stages that are collectively run by 17M+ daily queries as part of a migration to a new expression framework.
-        \item Engineered large-scale workload validation strategies to roll out migrated compiler stages, ensuring zero regressions across all 6B+ daily customer queries.
+        \item Engineered large-scale workload validation strategies to roll out migrated compiler stages, ensuring minimal regressions across 6B+ daily customer queries.
         \item Resolved 40-50 customer escalations per week during support rotations, triaging and resolving issues  with query performance degradation, correctness bugs, and compilation failures across the full stack.
     \end{itemize}
     \textit{Data Governance Team}
-    \begin{itemize}™
+    \begin{itemize}
         \item Led design of new SQL syntax enabling multiple policies on a table, reducing boilerplate and preventing errors in applying privacy constraints.
         \item Designed algorithms to enforce Join Policy semantics on the parse tree of a SQL query, enabling data sharing for over 3000 tables while preserving sensitive information. % the whole equivalence class thing, involved talking to Principals and discussions with product team on whether people would understand it
         \item Designed optimizations on query execution plans to increase query flexibility while maintaining privacy guarantees provided by aggregation policies, which protect over 80,000 tables in production.
@@ -80,9 +80,8 @@
 \cventry{Aug 2023 - June 2024}{FPGA Compiler Engineer}
 {Intel}{Toronto ON}{}
 {\begin{itemize}
-    \item Enabled the compilation of compute kernels in high-level \textbf{SYCL} code to pipelined \textbf{RTL} implementations for Intel FPGAs.
-    \item Created an FPGA-specific \textbf{LLVM} optimization pass in \textbf{C++} that improved performance by 15\% across standard \textbf{OpenCL} benchmarks by using scalar evolution analysis to narrow induction variables.
-    \item Debugged complex issues across the hardware-software boundary, building expertise in the full compilation stack from high-level code to hardware implementation.
+    \item Created an FPGA-specific \textbf{LLVM} optimization pass in \textbf{C++} that improved performance by 15\% across standard \textbf{OpenCL} benchmarks by using scalar evolution analysis to narrow induction variables, reducing bandwidth and area requirements on the device.
+    \item Debugged complex issues across the hardware-software boundary, from \textbf{SYCL} front-end through \textbf{LLVM} IR transformations to RTL code generation
 \end{itemize}}
 
 \begin{comment}
@@ -123,9 +122,8 @@ and then i was able to implement the rules for that type of policy
 
 \cventry{Jan 2022 - Apr 2022}{ML Compiler Engineer (Co-op)}{Groq}{Toronto ON}{}
 {\begin{itemize}
-    \item Designed optimizations for the execution of \textbf{ONNX} models on custom hardware, enabling up to 20\% throughput improvements by efficient packing of tensor operations.
-    \item Created optimization passes in \textbf{C++} using the \textbf{MLIR} compiler framework, applying cross-domain compilation techniques to neural network acceleration.
-    \item Built end-to-end validation pipeline in \textbf{PyTorch}, enabling rapid iteration between algorithmic improvements and hardware performance measurement.
+    \item Optimized memory layout for tensor operations by eliminating extraneous padding, improving throughput by up to 20\% in certain \textbf{ONNX} models on custom ML accelerator hardware.
+    \item Built end-to-end validation pipeline in \textbf{PyTorch} to track compiler QoR metrics for important models, ensuring effectiveness of implemented optimizations
 \end{itemize}}
 
 \begin{comment}
@@ -159,8 +157,7 @@ and then i was able to implement the rules for that type of policy
 \end{itemize}}
 \end{comment}
 
-% \section{Projects}
-\begin{comment}
+\section{Projects}
 \cventry{May 2022 - Dec 2022}{Bayesian Network Inference Accelerator}{}{Scala | Chisel | Python | Verilog}{}
 {\begin{itemize}
     \item Created a compiler in \textbf{Scala} to convert Bayesian network specifications into a \textbf{Verilog} module that can answer queries on the network with real-time evidence based on Markov-Chain Monte-Carlo techniques
@@ -168,7 +165,6 @@ and then i was able to implement the rules for that type of policy
     \item Created language for expressing Bayesian networks parsed using an \textbf{ANTLR 4} grammar
     \item Utilized \textbf{Chisel} to construct hardware modules dynamically and generate RTL for various backends
 \end{itemize}}
-\end{comment}
 
 % \cventry{Feb 2022 - Mar 2022}{CHIP-8 Emulator}{}{C++ | SDL2 | ImGUI}{}
 % {\begin{itemize}
